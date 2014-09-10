@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block button %}
+<button id="new_post_btn" type="button" class="btn btn-default; pull-right"><span class="glyphicon glyphicon-plus"></span> New Post</button>
+{% endblock %}
+{% block front %}
+<hr>
+<div class="container">
+
+{% for post in posts %}
+{% set post_id = post.key().id() %}
+{% set title = post.title %}
+{% set content = post.content %}
+{% set created = post.created %}
+{% set created = created.strftime("%c")%}
+{% set user = post.username %}
+
+
+{% include "post_template.html" %}
+
+{% endfor %}
+</div>
+<script type="text/javascript">
+    document.getElementById("new_post_btn").onclick = function () {
+        location.href = "/new_post";
+    };
+</script>
+
+{% endblock %}
