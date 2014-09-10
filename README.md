@@ -4,8 +4,11 @@ The application I built is mostly inspired from the Udacity course CS256, taught
 The application is hosted on Google App Engine.
 
 Libraries Used:
+
 	-webapp2
+
 	-jinja2
+	
 	-bootstrap
 
 Please do contribute to this repository.
